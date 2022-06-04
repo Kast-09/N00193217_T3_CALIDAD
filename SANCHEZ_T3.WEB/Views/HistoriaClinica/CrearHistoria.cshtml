@@ -1,0 +1,17 @@
+﻿<body>
+    <h1 id="NuevaHistoria">Historia Clínica</h1>
+    <div class="container">
+        <form action="/HistoriaClinica/CrearHistoria" method="post">   
+                    <h2>Datos Historia Clínica: </h2>
+                    <div class="mb-3">
+                        <label for="FechaRegistro">Fecha de Registro: </label>
+                        <input type="datetime-local" class="form-control" Name="FechaRegistro" id="FechaRegistro" required>
+                        @Html.ValidationMessage("Fecha")
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="/Home/Index" class="btn btn-link">Cancelar</a>
+                </form>
+
+    </div>
+</body>

@@ -1,0 +1,32 @@
+﻿<body>
+    <h1 id="NuevaHistoria">Historia Clínica</h1>    
+    <h2>Datos Dueño: </h2>
+    <div class="container">
+        <form action="/HistoriaClinica/Crear" method="post">   
+                    <div class="mb-3">
+                        <label for="Nombre">Nombre completo: </label>
+                        <input type="text" class="form-control" Name="Nombre" id="Nombre" required>
+                    @Html.ValidationMessage("Nombre completo")
+                    </div>
+                    <div class="mb-3">
+                        <label for="Direccion">Dirección: </label>
+                        <input type="text" class="form-control" Name="Direccion" id="Direccion" required>
+                        @Html.ValidationMessage("Dirección")
+                    </div>    
+                    <div class="mb-3">
+                        <label for="Telefono">Teléfono: </label>
+                        <input type="text" class="form-control" Name="Telefono" id="Telefono" required>
+                        @Html.ValidationMessage("Telefono")
+                    </div> 
+                    <div class="mb-3">
+                        <label for="Email">Email: </label>
+                        <input type="email" class="form-control" Name="Email" id="Email" required>
+                        @Html.ValidationMessage("Email")
+                    </div> 
+                    <br>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="/Home/Index" class="btn btn-link">Cancelar</a>
+                </form>
+
+    </div>
+</body>

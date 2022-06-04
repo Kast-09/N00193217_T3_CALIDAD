@@ -1,0 +1,24 @@
+﻿<body>
+    <h1 id="tituloLista">Lista Historias</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Código de Registro</th>
+            <td>Nombre Mascota</td>
+            <th>Fecha Registro</th>
+            <th>Nombre Dueño</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CodRegistro</td>
+                <td>@item.mascota.NombreMascota</td>
+                <td>@item.FechaRegistro</td>
+                <td>@item.mascota.dueño.Nombre</td>
+            </tr>
+        }    
+        </tbody>    
+    </table>
+</body>
